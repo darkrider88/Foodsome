@@ -263,7 +263,7 @@
           
           
       </div>
-      <div class="img"><img class="wine-img" src="images/wine-card.jpg" />
+      <div class="img"><img class="wine-img" />
       </div>
     </section>
   </div>
@@ -282,7 +282,7 @@
         The name Merlot is thought to be a diminutive of merle, the French name for the blackbird, probably a reference to
         the color of the grape.</p>
         
-    <img src="images/Wine_shop.jpg"></img>
+    <img class = "wine-desc-img"></img>
   </div>
 
 
@@ -332,7 +332,7 @@
 
 
 
-    var text = ["Do you know, you can click on below search and get random food?","Why do the French eat snails? They don't like fast food.","This may sound bananas but I find you a-peeling.", "☯ Time fries. So, eat, drink and explore pasta-billities ☯", "I removed all the fattening food from my house. It was delicious.", "Hey, you know if you were a fruit you'd be a fineapple."];
+    var text = ["Do you know, you can click on below search and get random food?","Why do the French eat snails? They don't like fast food.","This may sound bananas but I find you a-peeling.", "☯ Time fries. So, eat, drink and explore pasta-billities ☯", "I removed all the fattening food from my house. It was delicious.", "Hey, you know if you were a fruit you'd be a fineapple.","I don't want to look back and think, I could have eaten that. ","I am thankful for all the different ways I can eat potato.","We should always try to find food in every situation.","Don't forget you are what you eat; so eat a skinny person.","Are you also standing in front of salad, asking it to be a donut?","I met a snaccident today, consumed all snacks in regrettable manner.","We only have one life to live, so go on and lick that bowl.","What kind of car does the eggs drive? A Yolkswagon!!"];
     var counter = 0;
     var elem = $(".time-fries");
     setInterval(change, 4000);
@@ -388,6 +388,13 @@
       });
     });
    
+    //to change the image of description card and match card
+    $(document).ready(function(){
+      // get a random value and add the .jpg to it for image
+      var img_name = random_val_generator(14) + '.jpg';
+      $('.wine-img').attr('src','images/match/'+img_name);
+      $('.wine-desc-img').attr('src','images/desc/' + img_name);
+    });
   </script>
 
 
