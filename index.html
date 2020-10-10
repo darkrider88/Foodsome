@@ -62,7 +62,7 @@
                 </path>
               </svg>
             </div>
-            <input id="search" type="text" placeholder="What are you hungry for?" autocomplete="off" onkeydown='if(event.keyCode==13)getInputValue()'  />
+            <input id="search" type="text" placeholder="What are you hungry for?" autocomplete="off" onkeypress='if(event.keyCode==13)getInputValue()'  />
           </div>
 
 
@@ -371,7 +371,7 @@
     const wine_title = wine_type[num]; 
     const wine_to_append = all_wines[wine_type[num]]  // accessing the a randome value with the key from the all_wine jsobject
     
-    wine_desc.innerText = 'Type ' + wine_to_append; //adding the info 
+    wine_desc.innerText = 'Type: ' + wine_to_append; //adding the info 
     document.querySelector('.wine-desc h2').innerText = wine_title; // adding the title
 
 

@@ -96,10 +96,12 @@ async function fetch_food(food, meals_type){
 			}
 		);
 		} else {
-			 const error_text = document.createElement('h2');
-			 error_text.className = 'most-popular  error-padding';
-			 error_text.innerText = "Sorry, we can't find anything";
-			 document.querySelector('.cards').appendChild(error_text);
+			if(!$('#root').is(':empty') ){
+				$('#root').empty();
+			}
+			 const error_text = document.createElement('div');
+			 error_text.innerHTML = '<img src="images/error_img/food_error.png" alt="recipe not found error" class="food_err"></img><h1 class="food_err_text">Oops!, I have never prepared that.</h1>';
+			 document.querySelector('#root').appendChild(error_text);
 		}
 }
 
@@ -143,10 +145,11 @@ async function recommend_wine(url){
 		$('#root-card').empty();
 	}
 
-	if(json.recommendedWines.length !== 0){
+	if(json.status !== 'failure'){
+	if(json.recommendedWines !== 0){
 
 		const search_text = document.createElement('h2');
-		search_text.className = 'most-popular error-padding';
+		search_text.className = 'most-popular';
 		search_text.innerText = "Wines you were dreaming for...";
 		document.querySelector('#root-card').appendChild(search_text);
 
@@ -181,11 +184,15 @@ async function recommend_wine(url){
 			`;
 			}
 		);
-   } else {
-		const error_text = document.createElement('h2');
-		error_text.className = 'most-popular  error-padding';
-		error_text.innerText = "Sorry, we can't find anything";
-		document.querySelector('.cards').appendChild(error_text);
+   } 
+	}else {
+		if(!$('#root').is(':empty') ){
+			$('#root').empty();
+		}
+		const error_text = document.createElement('div');
+		error_text.innerHTML = '<img src="images/error_img/drunk.png" alt="still drunk?" class="food_err"></img><h1 class="food_err_text">Are you drunk too? Because I have never heard of a wine with that name.</h1>';
+		document.querySelector('#root').appendChild(error_text);
+
    }
 }
 
@@ -199,7 +206,7 @@ async function describe_wine(url,food){
 	if(!$('#root').is(':empty') ){
 		$('#root').empty();
 	}; 
-
+	if(json.status !== 'failure'){
 	if(json.wineDescription.length !== 0){
 
 		const search_text = document.createElement('h2');
@@ -215,11 +222,14 @@ async function describe_wine(url,food){
 	  </div>
 		`;
 
-	} else {
-		const error_text = document.createElement('h2');
-		error_text.className = 'most-popular  error-padding';
-		error_text.innerText = "Sorry, we can't find anything";
-		document.querySelector('#root-card').appendChild(error_text);
+	} 
+	}else {
+		if(!$('#root').is(':empty') ){
+			$('#root').empty();
+		}
+		const error_text = document.createElement('div');
+		error_text.innerHTML = '<img src="images/error_img/drunk.png" alt="still drunk?" class="food_err"></img><h1 class="food_err_text">Are you drunk too? Because I have never heard of a wine with that name.</h1>';
+		document.querySelector('#root').appendChild(error_text);
 	}
 }
 
@@ -240,7 +250,7 @@ async function pair_wine(url,food){
 	if(!$('#root').is(':empty') ){
 		$('#root').empty();
 	}
-
+	if(json.status !== 'failure'){
 	if(json.pairedWines.length !== 0){
 
 		const search_text = document.createElement('h2');
@@ -262,11 +272,14 @@ async function pair_wine(url,food){
 		</section>
 	  </div>`;
 		
-	} else{
-		const error_text = document.createElement('h2');
-		error_text.className = 'most-popular error-padding';
-		error_text.innerText = "Sorry, we can't find anything";
-		document.querySelector('#root-card').appendChild(error_text);
+	} 
+	}else{
+		if(!$('#root').is(':empty') ){
+			$('#root').empty();
+		}
+		const error_text = document.createElement('div');
+		error_text.innerHTML = '<img src="images/error_img/drunk.png" alt="still drunk?" class="food_err"></img><h1 class="food_err_text">Are you drunk too? Because I have never heard of a wine with that name.</h1>';
+		document.querySelector('#root').appendChild(error_text);
 	}
 
                 
