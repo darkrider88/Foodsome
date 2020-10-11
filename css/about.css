@@ -5,7 +5,7 @@ html {
     font-size: 16px;
     padding:0;
     scrollbar-width: normal;
-  scrollbar-color:#a7a67c black;
+  scrollbar-color:#78ce5e black;
 }
 
 body {
@@ -46,6 +46,16 @@ body {
 }
 
 
+a {
+  font-weight: bold;
+  text-decoration: underline;
+  
+}
+
+a:hover {
+  text-decoration: none;
+  color: #78ce5e;
+}
 
 
 @media only screen and (max-width:600px) {
@@ -204,5 +214,5 @@ body::-webkit-scrollbar-thumb
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-    background-color: #a7a67c;
+    background-color: #78ce5e;
 }

@@ -21,14 +21,133 @@ function getInputValue(){
 		// here we will fetch only wines... time to get stoned
 		
 		get_some_wine(food,meals_type);
-	} else {
+	} else if(food1.toLowerCase() === 'list wine' || food1.toLowerCase() === 'List wine' || food1.toLowerCase() === 'list wines' || food1.toLowerCase() === 'List wines' ) {//list the all the wines if user enters list wine in the search bar
+		list_wines();
+	}else {
 		// calling the fetch food function 
 		fetch_food(food,meals_type);
+	}	
+}
+
+function list_wines() {
+	if(!$('#root').is(':empty') ){
+		$('#root').empty();
 	}
 
-
+	document.querySelector('#root').innerHTML += `
+	<div class = "wine-list">
+	<h2 class="most-popular">Wine list</h2>
+	<ol >
+	<li class = "wine-list-start">
+	  White wine</li>
+		<ul style="list-style-type:disc">
+		  <li>Dry white wine</li>
+		  <ul style="list-style-type:circle">
+			
+			 <li>assyrtiko
+			 <li>pinot blanc
+			 <li>cortese
+			 <li>roussanne
+			 <li>moschofilero
+			 <li>muscadet
+			 <li>viognier
+			 <li>verdicchio
+			 <li>greco
+			 <li>marsanne
+			 <li>white burgundy
+			 <li>chardonnay
+			 <li>gruener veltliner
+			 <li>white rioja
+		 </ul>
 	
+		<li>mueller thurgau
+		<li>grechetto
+		<li>gewurztraminer
+		<li>chenin blanc
+		<li>white bordeaux
+		<li>semillon
+		<li>riesling
+		<li>sauternes
+		<li>sylvaner
+		<li>lillet blanc
+		</ul>
+	
+	  <li class = "wine-list-start">Red wine</li>
+		<ul style="list-style-type:disc">
+		<li>Dry red wine
+		  <ul style="list-style-type:circle">
+		   <li>petite sirah
+		   <li>zweigelt
+		   <li>baco noir
+		   <li>bonarda
+		   <li>cabernet franc
+		   <li>bairrada
+		   <li>barbera wine
+		   <li>primitivo
+		   <li>pinot noir
+		   <li>nebbiolo
+		   <li>dolcetto
+		   <li>tannat
+		   <li>negroamaro
+		   <li>red burgundy
+		   <li>corvina
+		   <li>rioja
+		   <li>cotes du rhone
+		   <li>grenache
+		   <li>malbec
+		   <li>zinfandel
+		   <li>sangiovese
+		   <li>carignan
+		   <li>carmenere
+		   </ul>
+		 <br>
+	
+		<li>bordeaux
+		<li>marsala
+		<li>port
+		<li>gamay
+		<li>dornfelder
+		<li>concord wine
+		<li>sparkling red wine
+		<li>pinotage
+		<li>agiorgitiko
+		</ul>
+	
+	  <li class = "wine-list-start">Dessert wine</li>
+	  <ul style="list-style-type:disc">
+	   <li> pedro ximenez
+		<li>moscato
+		<li>late harvest
+		<li>ice wine
+		<li>white port
+		<li>lambrusco dolce
+		<li>madeira
+		<li>banyuls
+		<li>in santo
+		<li>port
+		</ul>
+		<br>
+	
+	  
+	  <li class = "wine-list-start">Sparkling wine</li>
+	  <ul style="list-style-type:disc">
+		<li>cava
+		<li>cremant
+		<li>champagne
+		<li>prosecco
+		<li>spumante
+		<li>sparkling rose
+		</ul><br>
+	  <li class = "wine-list-start">Sherry</li>
+		<ul style="list-style-type:disc"><li>cream sherry
+		<li>dry sherry
+		</ul><br>
+	  <li class = "wine-list-start">Vermouth</li>
+		<ul style="list-style-type:disc"><li>dry vermouth
+	</ol></div>
+	`;
 }
+
 
 
 async function fetch_food(food, meals_type){
@@ -264,7 +383,7 @@ async function pair_wine(url,food){
 		<section class="wine-card">
 		  <h1>Wine Matches</h1> 
 		  <div class="content">
-		  <h3>${json.pairedWines[0]}, ${json.pairedWines[1]}, ${json.pairedWines[2]}</h3>
+		  <h3>${json.pairedWines[0]}, ${json.pairedWines[1]}</h3>
 			<p>${json.pairingText}</p>
 		  </div>
 		  <div class="img"><img class="wine-img" src="images/wine-card.jpg" />
