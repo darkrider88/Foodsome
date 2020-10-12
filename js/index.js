@@ -4,8 +4,8 @@
 /*for delegate event https://stackoverflow.com/questions/203198/event-binding-on-dynamically-created-elements */
 $(document).ready(function(){
   var zindex = 10;
-  
-  $("#root").on('click','.card',function(e){
+  //just binding it with document... to make it stable for showing cards
+  $(document).on('click','.card',function(e){
     e.preventDefault();
 
     var isShowing = false;
