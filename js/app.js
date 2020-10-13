@@ -151,6 +151,12 @@ function list_wines() {
 
 
 async function fetch_food(food, meals_type){
+
+	// clearing the root element if not null
+	if(!$('#root').is(':empty') ){
+		$('#root').empty();
+	}
+	displayLoader();
 	
 	const instructions =true; // setting it true will provide more info about the recipes
 
@@ -159,14 +165,7 @@ async function fetch_food(food, meals_type){
 	if(meals_type === '' || meals_type == null){
 		const url = `https://api.spoonacular.com/recipes/complexSearch/?apiKey=fe1e6859377e4ab3b2244075b5cfeae7&query=${food}&addRecipeInformation=${instructions}&number=60`;
 	}
-	
 
-
-	// clearing the root element if not null
-	if(!$('#root').is(':empty') ){
-		$('#root').empty();
-	}
-	
 	const response = await fetch(url);
 
 	const json = await response.json();
@@ -214,6 +213,7 @@ async function fetch_food(food, meals_type){
 			`;
 			}
 		);
+		hideLoader();
 		} else {
 			if(!$('#root').is(':empty') ){
 				$('#root').empty();
@@ -251,6 +251,13 @@ async function get_some_wine(food,meals_type) {
 
 
 async function recommend_wine(url){
+
+	//clearing the space if it is not null
+	if(!$('#root').is(':empty') ){
+		$('#root').empty();
+	}
+
+	displayLoader();
 	const response = await fetch(url);
 	const json = await response.json();
 	
@@ -259,20 +266,21 @@ async function recommend_wine(url){
 	const root_card = document.getElementById('#root-card');
 	
 	
-	//clearing the space if it is not null
-	if(!$('#root-card').is(':empty') ){
-		$('#root-card').empty();
-	}
-
+	
 	if(json.status !== 'failure'){
 	if(json.recommendedWines !== 0){
 
 		const search_text = document.createElement('h2');
 		search_text.className = 'most-popular';
 		search_text.innerText = "Wines you were dreaming for...";
-		document.querySelector('#root-card').appendChild(search_text);
+		document.querySelector('#root').appendChild(search_text);
 
-
+		//creating the div element with class cards because it is deleted above
+		const cards = document.createElement('div');
+		cards.className = 'cards';
+		cards.id = 'root-card';
+		document.querySelector('#root').appendChild(cards);
+		
 		json.recommendedWines.forEach(element => {
 			document.querySelector('#root-card').innerHTML += `
 			<div class="card">
@@ -303,6 +311,7 @@ async function recommend_wine(url){
 			`;
 			}
 		);
+		hideLoader();
    } 
 	}else {
 		if(!$('#root').is(':empty') ){
@@ -318,13 +327,16 @@ async function recommend_wine(url){
 
 
 async function describe_wine(url,food){
-	const response = await fetch(url);
-	const json = await response.json();
-	
 	//empty the cards
 	if(!$('#root').is(':empty') ){
 		$('#root').empty();
-	}; 
+	} 
+
+	displayLoader();
+	const response = await fetch(url);
+	const json = await response.json();
+	
+
 	if(json.status !== 'failure'){
 	if(json.wineDescription.length !== 0){
 
@@ -337,10 +349,10 @@ async function describe_wine(url,food){
 		<div class="wine-desc">
 		<h2> ${food.charAt(0).toUpperCase() + food.slice(1)} </h2><br>
 		<p>${json.wineDescription}</p>
-		<img src="images/Wine_shop.jpg"></img>
+		<img src="images/desc/${Math.floor(Math.random()*13)}.jpg"></img>
 	  </div>
 		`;
-
+		hideLoader();
 	} 
 	}else {
 		if(!$('#root').is(':empty') ){
@@ -358,17 +370,19 @@ async function describe_wine(url,food){
 
 
 async function pair_wine(url,food){
-	const response = await fetch(url);
-	const json = await response.json();
-	
-	
-	
+	//first clear the previous things
 	if(!$('#root-card').is(':empty') ){
 		$('#root-card').empty();
 	}
 	if(!$('#root').is(':empty') ){
 		$('#root').empty();
 	}
+	displayLoader();
+	const response = await fetch(url);
+	const json = await response.json();
+
+	
+	
 	if(json.status !== 'failure'){
 	if(json.pairedWines.length !== 0){
 
@@ -386,11 +400,11 @@ async function pair_wine(url,food){
 		  <h3>${json.pairedWines[0]}, ${json.pairedWines[1]}</h3>
 			<p>${json.pairingText}</p>
 		  </div>
-		  <div class="img"><img class="wine-img" src="images/wine-card.jpg" />
+		  <div class="img"><img class="wine-img" src="images/match/${Math.floor(Math.random()*13)}.jpg" />
 		  </div>
 		</section>
 	  </div>`;
-		
+		hideLoader();
 	} 
 	}else{
 		if(!$('#root').is(':empty') ){
@@ -408,6 +422,28 @@ async function pair_wine(url,food){
 
 
 
+
+function displayLoader(){
+	document.querySelector('#root').innerHTML = `
+	<div class="loader-container">
+      <div class="loader">
+        <div class="dash uno"></div>
+        <div class="dash dos"></div>
+        <div class="dash tres"></div>
+        <div class="dash cuatro"></div>
+      </div>
+      <div class="loading-text">Cooking..</div>
+	</div>`;
+	
+}
+
+function hideLoader(){
+	
+	$('.loader-container').fadeOut('slow',function(){
+		$('.loader-container').hide();
+		
+	});
+}
 
 
 
