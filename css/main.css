@@ -375,6 +375,11 @@ option:hover{
 
 }
 
+@media only screen and (max-width:980px){
+  .dropdown .dropbtn{
+    height: 50px;
+  }
+}
 
 @media only screen and (max-width: 600px) {
   .dropdown {

@@ -62,7 +62,7 @@
                 </path>
               </svg>
             </div>
-            <input id="search" type="text" placeholder="What are you hungry for?" autocomplete="off" onkeypress='if(event.keyCode==13)getInputValue()'  />
+            <input id="search" type="text" placeholder="What are you hungry for?" autocomplete="off" />
           </div>
 
 
@@ -107,7 +107,7 @@
 
 
           <div class="input-field second-wrap">
-            <a href = "#root"><button class="btn-search" type="button">Random food?</button></a>
+            <a href="#root"><button class="btn-search" type="button">Random food?</button></a>
           </div>
         </div>
         <span class="info">
@@ -146,256 +146,269 @@
   </section>
   <!--------CARDS-------------------------------------------------------------------------->
   <!-- --------------------------------------------------------------------------------- -->
-  
-  <div id="root" class = "root-main">
-    <div class="cards" id = "root-card"></div>    
-    
+
+  <div id="root" class="root-main">
+    <div class="cards" id="root-card"></div>
+
   </div>
 
 
 
-    <div class="cards">
-      <h2 class="most-popular">~ Most Searched ~</h2>
-      <div class="popular">
-        <div class="card">
-          <div class="card__image-holder">
-            <img class="card__image" src="images/pizza.jpg" alt="pizza" />
-          </div>
-          <div class="card-title">
-            <a href="#" class="toggle-info btn">
-              <span class="left"></span>
-              <span class="right"></span>
-            </a>
-            <h2>
-              Pizza
-              <small>Hot 'n round</small>
-            </h2>
-          </div>
-          <div class="card-flap flap1">
-            <div class="card-description">
-              Pizza is a savory dish of Italian origin consisting of a usually round, flattened base of leavened
-              wheat-based dough topped with tomatoes, cheese, and often various other ingredients (such as anchovies,
-              mushrooms, onions, olives, pineapple, meat, etc.) which is then baked at a high temperature, traditionally
-              in a wood-fired oven.A person who makes pizza is known as a pizzaiolo.
-            </div>
-            <div class="card-flap flap2">
-              <div class="card-actions">
-
-              </div>
-            </div>
-          </div>
+  <div class="cards">
+    <h2 class="most-popular">~ Most Searched ~</h2>
+    <div class="popular">
+      <div class="card">
+        <div class="card__image-holder">
+          <img class="card__image" src="images/pizza.jpg" alt="pizza" />
         </div>
-
-        <div class="card">
-          <div class="card__image-holder">
-            <img class="card__image" src="images/sushi.jpg" alt="sushi" />
-          </div>
-          <div class="card-title">
-            <a href="#" class="toggle-info btn">
-              <span class="left"></span>
-              <span class="right"></span>
-            </a>
-            <h2>
-              Sushi
-              <small>More in the kitchen</small>
-            </h2>
-          </div>
-          <div class="card-flap flap1">
-            <div class="card-description">
-              Sushi is a traditional Japanese dish of prepared vinegared rice (sushi-meshi), usually with some sugar and
-              salt, accompanying a variety of ingredients such as seafood, often raw, and vegetables. Styles of sushi
-              and its presentation vary widely, but the one key ingredient is "sushi rice", also referred to as shari or
-              sumeshi
-            </div>
-            <div class="card-flap flap2">
-              <div class="card-actions">
-                
-              </div>
-            </div>
-          </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2>
+            Pizza
+            <small>Hot 'n round</small>
+          </h2>
         </div>
+        <div class="card-flap flap1">
+          <div class="card-description">
+            Pizza is a savory dish of Italian origin consisting of a usually round, flattened base of leavened
+            wheat-based dough topped with tomatoes, cheese, and often various other ingredients (such as anchovies,
+            mushrooms, onions, olives, pineapple, meat, etc.) which is then baked at a high temperature, traditionally
+            in a wood-fired oven.A person who makes pizza is known as a pizzaiolo.
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
 
-        <div class="card">
-          <div class="card__image-holder">
-            <img class="card__image" src="images/mushrooms.jpg" alt="mushrooms" />
-          </div>
-          <div class="card-title">
-            <a href="#" class="toggle-info btn">
-              <span class="left"></span>
-              <span class="right"></span>
-            </a>
-            <h2>
-              Stuffed mushrooms
-              <small>I've personally tasted it</small>
-            </h2>
-          </div>
-          <div class="card-flap flap1">
-            <div class="card-description">
-              Stuffed mushrooms is a dish prepared using edible mushrooms as its primary ingredient. Many fillings can
-              be used, and the dish is typically baked or broiled. It can be served hot or at room temperature, and is
-              sometimes served cold.
-            </div>
-            <div class="card-flap flap2">
-              <div class="card-actions">
-                <!-- <a href="#" class="btn">Read more</a> -->
-              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="card">
+        <div class="card__image-holder">
+          <img class="card__image" src="images/sushi.jpg" alt="sushi" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2>
+            Sushi
+            <small>More in the kitchen</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description">
+            Sushi is a traditional Japanese dish of prepared vinegared rice (sushi-meshi), usually with some sugar and
+            salt, accompanying a variety of ingredients such as seafood, often raw, and vegetables. Styles of sushi
+            and its presentation vary widely, but the one key ingredient is "sushi rice", also referred to as shari or
+            sumeshi
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__image-holder">
+          <img class="card__image" src="images/mushrooms.jpg" alt="mushrooms" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2>
+            Stuffed mushrooms
+            <small>I've personally tasted it</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description">
+            Stuffed mushrooms is a dish prepared using edible mushrooms as its primary ingredient. Many fillings can
+            be used, and the dish is typically baked or broiled. It can be served hot or at room temperature, and is
+            sometimes served cold.
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <!-- <a href="#" class="btn">Read more</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
     <!-- </div> -->
-  
-  <!------------------------------id=root----------------------------------------------- -->
 
-  <h2 class="most-popular">~ Wine Pairing ~</h2>
-  <div class="big-card">
-    <section class="wine-card">
-      <h1>Wine Matches</h1>
-      
-      <div class="content">
-        <h3>Malbec, zinfandel</h3>
-        <p>Burger works really well with Malbec, Merlot, and Zinfandel. Merlot will be perfectly adequate for a classic
-          burger with standard toppings. Bolder toppings call for bolder wines, such as a malbec or peppery zinfandel.
-          You could try Bodega Calle Alberti 154 Malbec. Reviewers quite like it with a 4.3 out of 5 star rating and a
-          price of about 13 dollars per bottle.</p>
-          
-          
-      </div>
-      <div class="img"><img class="wine-img" />
-      </div>
-    </section>
-  </div>
+    <!------------------------------id=root----------------------------------------------- -->
+
+    <h2 class="most-popular">~ Wine Pairing ~</h2>
+    <div class="big-card">
+      <section class="wine-card">
+        <h1>Wine Matches</h1>
+
+        <div class="content">
+          <h3>Malbec, zinfandel</h3>
+          <p>Burger works really well with Malbec, Merlot, and Zinfandel. Merlot will be perfectly adequate for a
+            classic
+            burger with standard toppings. Bolder toppings call for bolder wines, such as a malbec or peppery zinfandel.
+            You could try Bodega Calle Alberti 154 Malbec. Reviewers quite like it with a 4.3 out of 5 star rating and a
+            price of about 13 dollars per bottle.</p>
 
 
+        </div>
+        <div class="img"><img class="wine-img" />
+        </div>
+      </section>
+    </div>
 
-  <!-- --------------------------------------------------------------------------------- -->
 
-  <!-- ------------------wine-description-card ---------------------------------------------->
-  <h2 class="most-popular">~ Some wine ~</h2>
-  
-  <div class="wine-desc">
-    
+
+    <!-- --------------------------------------------------------------------------------- -->
+
+    <!-- ------------------wine-description-card ---------------------------------------------->
+    <h2 class="most-popular">~ Some wine ~</h2>
+
+    <div class="wine-desc">
+
       <h2> Merlot </h2><br>
       <p>Merlot is a dark blue–colored wine grape variety, that is used as both a blending grape and for varietal wines.
-        The name Merlot is thought to be a diminutive of merle, the French name for the blackbird, probably a reference to
+        The name Merlot is thought to be a diminutive of merle, the French name for the blackbird, probably a reference
+        to
         the color of the grape.</p>
-        
-    <img class = "wine-desc-img"></img>
-  </div>
 
-
-  <!-- ---------------------------footer--------------------------------------------------- -->
-  <footer class="footer-distributed">
-    <div class="footer-left">
-      <p class="footer-links">
-        <a class="link-1" href="#">Home</a>
-
-
-        <a href="about.html">About</a>
-
-        <a href="mailto:shashwatpandey88@gmail.com">Contact</a>
-      </p>
-
-      <p>Foodsome created by some hungry folks</p>
+      <img class="wine-desc-img"></img>
     </div>
-  </footer>
-  <!-- ----------------------------------------------------------------------------------- -->
 
-  <script src="js/app.js" type="text/javascript"></script>
-  <script>
 
-    function func1() {
-      const s = document.getElementById('meals-type');
-      const meals_type = s.options[s.selectedIndex].value; //taking value from dropdown
-      
-      if (meals_type === 'wine') {
-        // if it is wine display extra options
-        document.getElementById('wine-box').style.display = 'block';
-      } else {
-        document.getElementById('wine-box').style.display = 'none';
-        /* document.querySelector('vertical-align').style.animation = 'fadeOut';
-        document.querySelector('vertical-align').style.animationDuration = '1s'; */
+    <!-- ---------------------------footer--------------------------------------------------- -->
+    <footer class="footer-distributed">
+      <div class="footer-left">
+        <p class="footer-links">
+          <a class="link-1" href="#">Home</a>
+          <a href="about.html#our-team">Team</a>
 
+          <a href="about.html">About</a>
+
+          <a href="mailto:shashwatpandey88@gmail.com">Contact</a>
+        </p>
+
+        <p>Foodsome created by some hungry folks</p>
+      </div>
+    </footer>
+    <!-- ----------------------------------------------------------------------------------- -->
+
+    <script src="js/app.js" type="text/javascript"></script>
+    <script>
+  
+
+      function func1() {
+        const s = document.getElementById('meals-type');
+        const meals_type = s.options[s.selectedIndex].value; //taking value from dropdown
+
+        if (meals_type === 'wine') {
+          // if it is wine display extra options
+          document.getElementById('wine-box').style.display = 'block';
+        } else {
+          document.getElementById('wine-box').style.display = 'none';
+          /* document.querySelector('vertical-align').style.animation = 'fadeOut';
+          document.querySelector('vertical-align').style.animationDuration = '1s'; */
+        }
       }
 
-    }
-
-    if (document.documentElement.clientWidth < 600) {
-      document.getElementById('category-dropdown').innerText = '▼ Select';
-      document.querySelector('.s130 form .inner-form .input-field.second-wrap .btn-search').style.fontSize = '11px';
-      document.getElementById('search').setAttribute("placeholder", "Hungry ?");
-      document.getElementById('search').setAttribute("style", "font-size:12px");
-      
-    }
-
-
-
-    var text = ["Do you know, you can click on below search and get random food?","Why do the French eat snails? They don't like fast food.","This may sound bananas but I find you a-peeling.", "☯ Time fries. So, eat, drink and explore pasta-billities ☯", "I removed all the fattening food from my house. It was delicious.", "Hey, you know if you were a fruit you'd be a fineapple.","I don't want to look back and think, I could have eaten that. ","I am thankful for all the different ways I can eat potato.","We should always try to find food in every situation.","Don't forget you are what you eat; so eat a skinny person.","Are you also standing in front of salad, asking it to be a donut?","I met a snaccident today, consumed all snacks in regrettable manner.","We only have one life to live, so go on and lick that bowl.","What kind of car does the eggs drive? A Yolkswagon!!"];
-    var counter = 0;
-    var elem = $(".time-fries");
-    setInterval(change, 4000);
-    function change() {
-      elem.fadeOut(function () {
-        elem.html(text[counter]);
-        counter++;
-        if (counter >= text.length) { counter = 0; }
-        elem.fadeIn();
+      //keep search in focus
+      $(document).ready(function(){
+        $('#search').focus();
       });
-    }
 
-    //function that gives the random value according to length
-    function random_val_generator(len){
-      return Math.floor(Math.random() * len);
-    }
-
-    //to refresh the wine description each time site loads 
-
-    all_wines = {
-    'Cabernet Sauvignon': 'Red. This French-origin grape was first made famous by the wines of Bordeaux. Today, Cabernet Sauvignon grows all over the world, including several unexpected places such as Lebanon and China.', 
-    'Merlot': 'Red. The “other” Bordeaux variety produces exceptional, age-worthy wines even if it is often overshadowed by Cabernet Sauvignon. Merlot is known for its boisterous cherry fruit flavors and refined tannin texture.', 
-    'Airén': 'White. One of the least-known of the prolific wine grapes of the world, Airén grows mostly in the Castilla-La Mancha region of Spain where vines are spread far apart to survive the arid high plains.', 
-    'Tempranillo': 'Red. This is Spain’s most planted and highly-prized red variety. Wines range in style from rosé to red, but Tempranillo is perhaps most known by its two champion regions of Rioja and Ribera del Duero.', 
-    'Chardonnay': 'White. The world’s favorite white wine originated in Burgundy, France, where wines were traditionally aged in oak barriques (barrels). The oak-aging makes Chardonnay one of the boldest styles of white wine in the world.', 
-    'Syrah': 'Red. Syrah originated in the Northern Rhône of France and went on to become the most popular wine in Australia (where it’s called Shiraz).', 
-    'Garnacha': 'Red. This is a lighter-colored red with high-toned aromas of red and black berries. For what the grape lacks in tannin it makes up for with zingy acidity and elevated alcohol. This grape blends exceptionally well with Syrah and Monastrell.', 
-    'Sauvignon Blane': 'White. Sauvignon means “savage” or “wild,” which describes the state of the wild white grape vines planted around Bordeaux and the Loire Valley of France. Sauvignon Blanc is being recognized as increasingly special, as it was recently identified to be the parent grape of Cabernet Sauvignon.', 
-    'Trebbiano Toscano': 'White. This is another lesser-known grape at the top of the list of Italian origin wines that’s mostly used in the production of Balsamic vinegar and French Brandy. In Cognac this grape is known as Ugni Blanc.', 
-    'Pinot Noir': 'Red. A red wine that’s quickly rising in popularity around the world. Pinot Noir is loved for its brilliant red fruit flavors and floral notes. The grape is very finicky to grow and tends to prefer cooler climates such as those in Burgundy, France, Oregon, and New Zealand (among others).'
-      }
-    const wine_desc = document.querySelector('.wine-desc p');
-    const num = random_val_generator(Object.keys(all_wines).length); //getting the rand num
-    
-    const wine_type = Object.keys(all_wines); // this will return all the keys in an array
-    const wine_title = wine_type[num]; 
-    const wine_to_append = all_wines[wine_type[num]]  // accessing the a randome value with the key from the all_wine jsobject
-    
-    wine_desc.innerText = 'Type: ' + wine_to_append; //adding the info 
-    document.querySelector('.wine-desc h2').innerText = wine_title; // adding the title
-
-
-    //changing the search button text if user is not entering anything
-
-    $(document).ready(function(){
-      $('#search').on('input',function(){
-        $('.btn-search').text('Find me, Eat me');
-      });
-      $('#search').on('blur keyup',function(){
-        if($('#search').val().length === 0 ){ //if input is empty
-          $('.btn-search').text('Random food?');
+       //for enter key
+       $("#search").keypress(function (event) {
+        if (event.keyCode === 13) {
+          $(".btn-search").click();
         }
       });
-    });
-   
-    //to change the image of description card and match card
-    $(document).ready(function(){
-      // get a random value and add the .jpg to it for image
-      var img_name = random_val_generator(14) + '.jpg';
-      $('.wine-img').attr('src','images/match/'+img_name);
-      $('.wine-desc-img').attr('src','images/desc/' + img_name);
-    });
-  </script>
+
+      if (document.documentElement.clientWidth < 600) {
+        document.getElementById('category-dropdown').innerText = '▼ Select';
+        document.querySelector('.s130 form .inner-form .input-field.second-wrap .btn-search').style.fontSize = '11px';
+        document.getElementById('search').setAttribute("placeholder", "Hungry ?");
+        document.getElementById('search').setAttribute("style", "font-size:12px");
+
+      }
+
+
+
+      var text = ["Do you know, you can click on below search and get random food?","search list wines to get the list of all the wines...", "Why do the French eat snails? They don't like fast food.", "This may sound bananas but I find you a-peeling.", "☯ Time fries. So, eat, drink and explore pasta-billities ☯", "I removed all the fattening food from my house. It was delicious.", "Hey, you know if you were a fruit you'd be a fineapple.", "I don't want to look back and think, I could have eaten that. ", "I am thankful for all the different ways I can eat potato.", "We should always try to find food in every situation.", "Don't forget you are what you eat; so eat a skinny person.", "Are you also standing in front of salad, asking it to be a donut?", "I met a snaccident today, consumed all snacks in regrettable manner.", "We only have one life to live, so go on and lick that bowl.", "What kind of car does the eggs drive? A Yolkswagon!!"];
+      var counter = 0;
+      var elem = $(".time-fries");
+      setInterval(change, 4000);
+      function change() {
+        elem.fadeOut(function () {
+          elem.html(text[counter]);
+          counter++;
+          if (counter >= text.length) { counter = 0; }
+          elem.fadeIn();
+        });
+      }
+
+      //function that gives the random value according to length
+      function random_val_generator(len) {
+        return Math.floor(Math.random() * len);
+      }
+
+      //to refresh the wine description each time site loads 
+
+      all_wines = {
+        'Cabernet Sauvignon': 'Red. This French-origin grape was first made famous by the wines of Bordeaux. Today, Cabernet Sauvignon grows all over the world, including several unexpected places such as Lebanon and China.',
+        'Merlot': 'Red. The “other” Bordeaux variety produces exceptional, age-worthy wines even if it is often overshadowed by Cabernet Sauvignon. Merlot is known for its boisterous cherry fruit flavors and refined tannin texture.',
+        'Airén': 'White. One of the least-known of the prolific wine grapes of the world, Airén grows mostly in the Castilla-La Mancha region of Spain where vines are spread far apart to survive the arid high plains.',
+        'Tempranillo': 'Red. This is Spain’s most planted and highly-prized red variety. Wines range in style from rosé to red, but Tempranillo is perhaps most known by its two champion regions of Rioja and Ribera del Duero.',
+        'Chardonnay': 'White. The world’s favorite white wine originated in Burgundy, France, where wines were traditionally aged in oak barriques (barrels). The oak-aging makes Chardonnay one of the boldest styles of white wine in the world.',
+        'Syrah': 'Red. Syrah originated in the Northern Rhône of France and went on to become the most popular wine in Australia (where it’s called Shiraz).',
+        'Garnacha': 'Red. This is a lighter-colored red with high-toned aromas of red and black berries. For what the grape lacks in tannin it makes up for with zingy acidity and elevated alcohol. This grape blends exceptionally well with Syrah and Monastrell.',
+        'Sauvignon Blane': 'White. Sauvignon means “savage” or “wild,” which describes the state of the wild white grape vines planted around Bordeaux and the Loire Valley of France. Sauvignon Blanc is being recognized as increasingly special, as it was recently identified to be the parent grape of Cabernet Sauvignon.',
+        'Trebbiano Toscano': 'White. This is another lesser-known grape at the top of the list of Italian origin wines that’s mostly used in the production of Balsamic vinegar and French Brandy. In Cognac this grape is known as Ugni Blanc.',
+        'Pinot Noir': 'Red. A red wine that’s quickly rising in popularity around the world. Pinot Noir is loved for its brilliant red fruit flavors and floral notes. The grape is very finicky to grow and tends to prefer cooler climates such as those in Burgundy, France, Oregon, and New Zealand (among others).'
+      }
+      const wine_desc = document.querySelector('.wine-desc p');
+      const num = random_val_generator(Object.keys(all_wines).length); //getting the rand num
+
+      const wine_type = Object.keys(all_wines); // this will return all the keys in an array
+      const wine_title = wine_type[num];
+      const wine_to_append = all_wines[wine_type[num]]  // accessing the a randome value with the key from the all_wine jsobject
+
+      wine_desc.innerText = 'Type: ' + wine_to_append; //adding the info 
+      document.querySelector('.wine-desc h2').innerText = wine_title; // adding the title
+
+
+      //changing the search button text if user is not entering anything
+
+      $(document).ready(function () {
+        $('#search').on('input', function () {
+          $('.btn-search').text('Find me, Eat me');
+        });
+        $('#search').on('blur keyup', function () {
+          if ($('#search').val().length === 0) { //if input is empty
+            $('.btn-search').text('Random food?');
+          }
+        });
+      });
+
+      //to change the image of description card and match card
+      $(document).ready(function () {
+        // get a random value and add the .jpg to it for image
+        var img_name = random_val_generator(14) + '.jpg';
+        $('.wine-img').attr('src', 'images/match/' + img_name);
+        $('.wine-desc-img').attr('src', 'images/desc/' + img_name);
+      });
+    </script>
 
 
 </body>

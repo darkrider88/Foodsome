@@ -148,10 +148,11 @@ a:hover {
 
 
 #team2 {
+  background-position: center;
   float: right;
   height: 300px;
   width: 300px;
-  margin-left: 2em;
+  margin-left: 1em;
   margin-bottom: 1em;
   border-radius: 50%;
   overflow: hidden;

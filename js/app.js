@@ -219,7 +219,7 @@ async function fetch_food(food, meals_type){
 				$('#root').empty();
 			}
 			 const error_text = document.createElement('div');
-			 error_text.innerHTML = '<img src="images/error_img/food_error.png" alt="recipe not found error" class="food_err"></img><h1 class="food_err_text">Oops!, I have never prepared that.</h1>';
+			 error_text.innerHTML = '<img src="images/error_img/food_error.png" alt="recipe not found error" class="food_err"></img><h1 class="food_err_text">Oops! I have never prepared that.</h1>';
 			 document.querySelector('#root').appendChild(error_text);
 		}
 }
