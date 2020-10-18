@@ -32,13 +32,20 @@
 
 
   <section class="hero">
-    <!--bg image-->
-    <!--   <a href="https://www.google.com" target="_blank"> ABOUT </a> -->
 
     <div class="logo">
-      <img src="images/logo.png" ,alt="FoodSome">
-      <nav><a href="about.html" class="about"> About </a></nav>
+      <img src="images/logo.png" alt="FoodSome">
+      <button class="hamburger" id="hamburger">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAA00lEQVRIie2UvQ6CMBSFL9IO3WByY4TFhM0QX0d8KUN8gL6HBpKuDl1hsmhIOgAJJnWi0c3YqgN8080ZTs79yQWY+TfOWHDOd4SQrQ3Tvu8PYRjutcAYw1LKVllCStkyxvBLB2VZFr7vr561D1FN05yDIFgb+kwFPe88z5cY441SChkZOs59GIZTkiQXLVJKXSHE1dYV1XV9o5S6AAALk7RvdTQWNkeEEDrGcSzM400CvYOqqgrP877zKn7y7DjnKSEkNUwPAABd12VRFGU2vGbMeQAYtzJuQPO+qwAAAABJRU5ErkJggg==">
+      </button>
+      <nav id="nav-ul">
+        <a href="#" class="about"> Home </a>
+        <a href="about.html#our-team" class="about"> Team </a>
+        <a href="about.html" class="about"> About </a>
+        <a href="mailto:shashwatpandey88@gmail.com" class="about"> Contact </a>
+      </nav>
     </div>
+    
 
 
     <div class="hero-text">
@@ -70,18 +77,9 @@
 
           <div class="dropdown">
             <select class="dropbtn" name="meals-type" id="meals-type" onchange="func1()">
-              <!-- <button class="dropbtn"> ▼ Select Category 
-        <i class="fa fa-caret-down"></i>
-      </button>
-       -->
+   
               <div class="dropdown-content">
 
-
-                <!-- <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-       -->
-                <!-- ▼  -->
                 <option class="drop" id="category-dropdown" selected value>Select Category</option>
                 <option class="drop" value="wine">Wine</option>
                 <option class="drop" value="main course">Main course</option>
@@ -406,6 +404,25 @@
         var img_name = random_val_generator(14) + '.jpg';
         $('.wine-img').attr('src', 'images/match/' + img_name);
         $('.wine-desc-img').attr('src', 'images/desc/' + img_name);
+      });
+
+      //for mobile nav
+      const hamburger = document.getElementById("hamburger");
+      const navUl = document.getElementById("nav-ul");
+      hamburger.addEventListener('click',(e) => {
+        e.stopPropagation();
+        if(navUl.classList.contains('show-nav')){
+          navUl.classList.remove('show-nav');
+        } else {
+          navUl.classList.toggle('show-nav');
+        }
+        
+      });
+
+      //if user click anywhere in the body
+      $(document.body).click(function(){
+       
+        navUl.classList.remove('show-nav');
       });
     </script>
 

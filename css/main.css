@@ -32,7 +32,7 @@ body::-webkit-scrollbar-thumb
     background-color: #00ad5f;
 }
 .hero{
-  background-image:linear-gradient(rgba(0, 0, 0, 0.308), rgba(0, 0, 0, 0.404)), url(../images/bg10.jpg);
+  background-image:linear-gradient(rgba(0, 0, 0, 0.508), rgba(0, 0, 0, 0.404)), url(../images/bg10.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -57,21 +57,16 @@ body::-webkit-scrollbar-thumb
     
   }
 
-nav{
-  position: static; 
-  text-decoration: none; 
-  display: block;
-  padding-top:45px;
-  margin-left: 20em;/* 75em */
-  margin-right: -25em;
+/* nav{
   
-} 
+  text-decoration: none; 
+  display: flex;
+  flex-direction: row;
+  padding-top:30px;
+  float: right;
+  
+}  */
 
-@media only screen and (max-width:600px) {
-  nav {
-    display: none;
-  }
-}
 
 nav a {
   color: white;
@@ -96,6 +91,91 @@ nav a {
   
 
 }
+.logo{
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding:20px 0 20px 0; /*-------------------Logo position--------------------------------------------------*/
+}
+
+.logo img{
+  width:auto;
+  height:15%;
+}
+
+
+.hamburger {
+  background-color: transparent;
+  border: 0;
+  color: #FFF;
+  display: none;
+  margin-top: 20px;
+  cursor: pointer;
+ 
+}
+
+
+
+.hamburger:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+
+
+
+@media only screen and (max-width:600px) {
+  .hamburger {
+    display: block;
+    float: right;
+  }
+
+  nav {
+    display: none;
+    text-decoration: none; 
+    position: absolute;
+    background-color:#4d3319;
+    top: 0;
+    bottom: 0;
+    left:0;
+    opacity: 1;
+    animation: fadeIn;
+    animation-duration: 1s;
+    width: 50%;
+    height: 100%;
+    z-index: 100;
+    overflow: hidden;
+
+  
+  }
+  nav a {
+    color: white;
+    padding-bottom: 1em;
+    
+  }
+  .about:hover{
+    background: none;
+    outline: none;
+    text-decoration: underline;
+  }
+
+  nav a:nth-child(1){
+    margin-top: 2em;
+  }
+  nav.show-nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .logo{
+    padding:30px;
+    
+  }
+  .logo img {
+    height: 10%;
+  }
+}
+
+
 
 .time-fries{
  
@@ -126,36 +206,10 @@ font-family: 'Lobster', cursive;
 }
 
 
-.logo{
-  display: flex;
-  justify-content: center; /* center */
-  padding:20px; /*-------------------Logo position--------------------------------------------------*/
 
-
-
-}
-
-.logo img{
-  width:30%;
-  height:15%;
-  
-  
-
-}
-@media only screen and (max-width: 600px) {
-  .logo{
-    padding:30px;
-  }
-
-  .logo img{
-    width:60%;
-    height:100%;
-  
-  }
-}
 /*-------------------------------------------------------------------------------------------------*/
 .s130{
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: -ms-flexbox;
   display: flex;
     /* -ms-flex-pack: center;  */
