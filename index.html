@@ -109,7 +109,7 @@
         </div>
         <span class="info">
 
-          <div class="vertical-align" id="wine-box">
+          <div class="vertical-align" id="wine-box" onchange="changePlaceholder()">
             <div class="btns">
               <label>
                 <input name="button-group" type="radio" value="pair">
@@ -304,7 +304,7 @@
 
     <script src="js/app.js" type="text/javascript"></script>
     <script>
-  
+      
 
       function func1() {
         const s = document.getElementById('meals-type');
@@ -315,9 +315,24 @@
           document.getElementById('wine-box').style.display = 'block';
         } else {
           document.getElementById('wine-box').style.display = 'none';
-          /* document.querySelector('vertical-align').style.animation = 'fadeOut';
-          document.querySelector('vertical-align').style.animationDuration = '1s'; */
         }
+        //changing placeholder back
+        if(meals_type !== 'wine'){
+          document.getElementById('search').setAttribute("placeholder", "Hungry ?");
+        }
+      }
+      //changed the placeholder of search bar as per the wine options selected
+      function changePlaceholder(){
+      const wine_options = document.querySelector('input[name="button-group"]:checked').value;
+      
+      if( wine_options === 'pair'){
+        document.getElementById('search').setAttribute("placeholder", "enter a food name...");
+      } else{
+        document.getElementById('search').setAttribute("placeholder", "wine (ex: merlot)");
+      }
+      if(wine_options === null){
+        document.getElementById('search').setAttribute("placeholder", "Hungry ?");
+      }
       }
 
       //keep search in focus

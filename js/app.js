@@ -15,7 +15,7 @@ function getInputValue(){
 	//getting the value of dropdown list
 	const s = document.getElementById('meals-type');
 	const meals_type = s.options[s.selectedIndex].value;
-
+	
 	// I am including the wine section in the drop down...
 	if( meals_type === 'wine') {
 		// here we will fetch only wines... time to get stoned
