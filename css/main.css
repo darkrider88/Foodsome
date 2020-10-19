@@ -57,16 +57,12 @@ body::-webkit-scrollbar-thumb
     
   }
 
-/* nav{
-  
-  text-decoration: none; 
-  display: flex;
-  flex-direction: row;
-  padding-top:30px;
-  float: right;
-  
-}  */
-
+body {
+  /* <a href="https://www.wowpatterns.com/free-vector-art">Wow Patterns</a> */
+  background-image: url(../images/pizza-bg.jpg);
+ 
+   z-index: -10000;
+}
 
 nav a {
   color: white;
@@ -792,6 +788,7 @@ option:hover{
   .most-popular {
     font-size: 25px;
     margin: 2em auto;
+    font-weight: bold;
   }
   .error-padding{
     font-size: 20px;
@@ -1084,7 +1081,7 @@ div.card.show div.flap2 {
   .wine-card h1::after {
     content: '';
     position: absolute;
-    width: 6rem;
+    /* width: 6rem; */
     background-color: #ccc;
     height: 2px;
     top: 0;
@@ -1122,6 +1119,16 @@ div.card.show div.flap2 {
     margin-bottom: var(--box-y-padding);
     line-height: 1.5;
   }
+@media only screen and (max-width:600px){
+  .wine-card p {
+    font-family: robotoo;
+    text-align: left;
+    padding: 1em;
+    background-color: white;
+    /* font-weight: 600; */
+  }
+}
+
   .content a {
     text-decoration: none;
     border: 1px solid #b3b3b3;
@@ -1171,7 +1178,7 @@ div.card.show div.flap2 {
   flex-wrap: no-wrap;
   min-width: 500px;
   width: 50%;
-  background-color: rgba(255, 255, 255, 0.808);
+  background-color: rgba(255, 255, 255, 0.925);
   text-align: left;
   -webkit-box-shadow: -6px -6px 10px 0px rgba(50, 50, 50, 0.75);
 -moz-box-shadow:    -6px -6px 10px 0px rgba(50, 50, 50, 0.75);
