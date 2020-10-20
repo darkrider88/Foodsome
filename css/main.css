@@ -57,12 +57,6 @@ body::-webkit-scrollbar-thumb
     
   }
 
-body {
-  /* <a href="https://www.wowpatterns.com/free-vector-art">Wow Patterns</a> */
-  background-image: url(../images/pizza-bg.jpg);
- 
-   z-index: -10000;
-}
 
 nav a {
   color: white;
